@@ -9,6 +9,7 @@ run:
 docker-build:
 	docker build -t baladevops10.azurecr.io/roboshop-user .
 	docker puch baladevops10.azurecr.io/roboshop-user
+
 db-init:
 	mongosh --host $${MONGO_HOST:-localhost} < db/master-data.js
 
